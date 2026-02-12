@@ -15,7 +15,12 @@ namespace AM.ApplicationCore.Domain
         public DateTime FlightDate { get; set; }
         public int FlightId { get; set; }
 
-        //Association 1..*
         public Plane? Plane { get; set; }
+        public IList<Passenger> Passengers { get; set; }
+        public override string ToString()
+        {
+            return "FlightId: " + FlightId + ", Destination: " + Destination + ", Date: " + FlightDate + ", Duration: " + EstimatedDuration + "h";
+        }
+
     }
 }

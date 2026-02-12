@@ -23,5 +23,11 @@ namespace AM.ApplicationCore.Domain
             Capacity = capacity;
             ManufactureDate = manufactureDate;
         }
+
+        public IList<Flight> Flights { get; set; }
+        public override string ToString()
+        {
+            return "PlaneId: " + PlaneId + ", Type: " + PlaneType + ", Capacity: " + Capacity + ", Date: " + ManufactureDate.ToShortDateString();
+        }
     }
 }

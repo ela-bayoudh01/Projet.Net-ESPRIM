@@ -24,5 +24,16 @@ namespace AM.ApplicationCore.Domain
             LastName = lastName;
             PassportNumber = passportNumber;
         }
+
+        public override string PassengerType
+        {
+            get { return "Staff passenger type"; }
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + ", Function: " + Function + ", Salary: " + Salary + ", EmployementDate: " + EmploymentDate.ToShortDateString();
+        }
+
     }
 }
